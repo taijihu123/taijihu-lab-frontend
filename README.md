@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# TaijiHu智能实验室前端项目
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+这是一个基于React和TypeScript的现代化前端应用，展示了太极湖智能实验室的主题网页设计。
 
-Currently, two official plugins are available:
+## 项目特性
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 响应式设计，适配各种设备
+- 现代化的UI界面
+- 平滑滚动和动画效果
+- AI实验室功能展示
+- 移动端支持
 
-## Expanding the ESLint configuration
+## 技术栈
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React + TypeScript
+- Vite构建工具
+- Tailwind CSS
+- FontAwesome图标库
 
-- Configure the top-level `parserOptions` property like this:
+## 开发指南
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 部署
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+构建后的文件位于`dist`目录中，可直接部署到任何静态文件服务器上。
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
